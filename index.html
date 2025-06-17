@@ -23,63 +23,67 @@
 
 <script>
 
+
+
 // Write your code here.
 
-// Change the turtle position
-setPos(300,100);
+//======================================================== Position de la tortue
+//setPos(300,300);
 
-// Set the line width
-setLineWidth(10);
+//======================================================== épaisseur du trais
+//setLineWidth(10);
 
-// Change the color 
+// ========================================================Couleur du trait 
+
 // Predefined colors are : white, black, red, green, blue, yellow, fuchsia, aqua ; all with the "color." prefix
-changeColor(color.blue);
+
+//changeColor(color.red);
+
 // You can also specify a color with its RGB notation
 // changeColor("#8b22b5");
 // Another possibility is to use :
 // shiftColor(0.25); // -> passe en mode "arc-en-ciel" et se décale de 25%
 
-// Move forward by an amount of pixel
-forward(177);
+//======================================================== Avancer de ..px
+//forward(200);
 
-changeColor("#2DC567");
-// Move backward by an amount of pixel
-backward(10);
+//======================================================== Reculer de ..px
+//backward(100);
 
-// Turn right by an angle
-right(90);
-forward(100);
-
-// Turn left by an angle
-left(180-40);
-forward(50);
+//======================================================== Tourner avec un angle de .. a droite
+//right(90);
 
 
-// Face to a side
-faceLeft(); // faceRight, faceUp, faceDown
-forward(100);
-
-// Draw an arc on the turtle's left, given a radius and an angle
-arcLeft(50,90);
+//======================================================== Tourner avec un angle de .. a gauche
+//left(180-40);
 
 
-// Draw an arc on the turtle's right, given a radius and an angle
-arcRight(100,90);
 
-// Stop the writing
-up();
+//======================================================== orienter par rapport a la tortue
+//faceRigth();
+//faceLeft(); 
+//faceUp()
+//faceDown();
+//avancer
 
-backward(200);
 
-// Start the writing
-down();
+// ======================================================Faire un arc de cercle de (rayon , angles) a gauche
+//arcLeft(50,90);
 
-right(135);
-forward(100);
 
-// Shift the colors, rainbow
-shiftColor(0);
-shiftColor(0.45);
+//====================================================== Faire un arc de cercle de (rayon , angles) a droite
+//arcRight(100,90);
+
+//======================================================= Lever le stylo
+//up();
+
+//======================================================= Poser le stylo
+//down();
+
+
+//======================================================= Décaler la couleur
+//shiftColor(0);
+//shiftColor(0.45);
 
 </script>
 
