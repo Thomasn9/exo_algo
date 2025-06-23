@@ -59,21 +59,21 @@ function setup(){
 
 // =======================================================\\EXO 5//===========================================================
 
-let g=0;
+// let g=0;
 
-function draw() {
-  background(0);
-  stroke(255);
-  strokeWeight(3);
-  fill(0, g, 0);
-  console.log(g);
-  g = (g+3)%256;
-  if(mouseY > 200) {
-    circle(200, 200, mouseX);
-  } else { 
-    square(200 - mouseX/2, 200 - mouseX/2, mouseX);
-  }
-}
+// function draw() {
+//   background(0);
+//   stroke(255);
+//   strokeWeight(3);
+//   fill(0, g, 0);
+//   console.log(g);
+//   g = (g+3)%256;
+//   if(mouseY > 200) {
+//     circle(200, 200, mouseX);
+//   } else { 
+//     square(200 - mouseX/2, 200 - mouseX/2, mouseX);
+//   }     
+// }
 
 
 // ======================================================\\BONUS//==============================================================
