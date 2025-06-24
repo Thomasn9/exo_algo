@@ -58,14 +58,36 @@ Par exemple, l'appel à `fastCountdown(3)` devra afficher
 console.log("=========================\\exercice 3//============================")
 
 function fastCountdown(nombre){
-    while (nombre >= 0.1) {
+    if(nombre >= 0.1){
+        while (nombre >= 0.1) {
         console.log(nombre);
         nombre = nombre /2 ;
         }
+    }else{
+        console.log("le nombre que vous avez choisis est négatif")
+    }
+    
     }
 
 
-fastCountdown(8);
+fastCountdown(6);
+
+console.log("=========================\\exercice 3 bis//============================")
+
+function fastCountdown_(start) {
+    let compteur = start;
+    let compteurTours = 0;
+    while(compteur >= 0.1) {
+        console.log(compteur);
+        compteur = compteur/2;
+        compteurTours++;
+    }
+    console.log("L'appel avec", start, "est terminée (", compteurTours, "tours)");
+}
+fastCountdown_(3);
+fastCountdown_(20);
+
+fastCountdown_(1000000);
 
 /*
 Écrire une fonction evenNumbers qui reçoit deux nombres en entrées et qui affiche tous les nombres pairs entre ces deux nombres.
@@ -75,10 +97,42 @@ Par exemple, l'appel à `evenNumbers(5,14)` devra afficher
 10
 12
 */
-console.log("=========================\\exercice 3//============================")
-function evenNumber(nombre1,nombre2){
 
+/*
+Écrire une fonction evenNumbers qui reçoit deux nombres en entrées et qui affiche tous les nombres pairs entre ces deux nombres.
+Par exemple, l'appel à `evenNumbers(5,14)` devra afficher
+6
+8
+10
+12
+*/
+function evenNumbers(n1, n2) {
+    for(let i = n1 ; i < n2 ; i++) {
+        if(i%2 == 0) {
+            console.log(i);
+        }
+    }
 }
+
+evenNumbers(5, 14);
+
+function evenNumbersBis(n1, n2) {
+    if(n1 > n2) {
+        evenNumbersBis(n2, n1);
+        return;
+    }
+    let start = n1;
+    if(start%2 == 1) {
+        start = n1 + 1;
+    }
+
+    for(let i = start ; i < n2 ; i += 2) {
+        console.log(i);
+    }
+}
+evenNumbersBis(5, 14);
+console.log("--------");
+evenNumbersBis(14, 5);
 
 /*
 Sur la page wikipedia du PGCD (pas besoin de savoir ce que c'est), on peut trouver l'algorithme récursif suivant :
@@ -91,5 +145,73 @@ fonction euclide(a, b)
 */
 
 /*
+Écrire une fonction evenNumbers qui reçoit deux nombres en entrées et qui affiche tous les nombres pairs entre ces deux nombres.
+Par exemple, l'appel à `evenNumbers(5,14)` devra afficher
+6
+8
+10
+12
+*/
+function evenNumbers(n1, n2) {
+    for(let i = n1 ; i < n2 ; i++) {
+        if(i%2 == 0) {
+            console.log(i);
+        }
+    }
+}
+
+evenNumbers(5, 14);
+
+function evenNumbersBis(n1, n2) {
+    if(n1 > n2) {
+        evenNumbersBis(n2, n1);
+        return;
+    }
+    let start = n1;
+    if(start%2 == 1) {
+        start = n1 + 1;
+    }
+
+    for(let i = start ; i < n2 ; i += 2) {
+        console.log(i);
+    }
+}
+evenNumbersBis(5, 14);
+console.log("--------");
+evenNumbersBis(14, 5);
+
+/*
+Sur la page wikipedia du PGCD (pas besoin de savoir ce que c'est), on peut trouver l'algorithme récursif suivant :
+
+fonction euclide(a, b)
+    si b = 0 alors retourner a
+    sinon retourner euclide(b, a modulo b)
+
+Écrire cette fonction.
+*/
+function euclide(a, b) {
+    if(b == 0) {
+        return a;
+    } else {
+        return euclide(b, a%b);
+    }
+}
+/*
 À la main, calculer `euclide(6,10)`.
+*/
+/*
+euclide(6, 10) = ?
+    -> euclide(10, 6%10) = euclide(10, 6)
+    euclide(10, 6) = ?
+        -> euclide(6, 10%6) = euclide(6, 4)
+        euclide(6, 4) = ?
+            -> euclide(4, 6%4) = euclide(4, 2)
+            euclide(4, 2) = ?
+                ->euclide(2, 4%2) = euclide(2, 0)
+                euclide(2, 0) = ?
+                    -> 2
+                -> 2
+            -> 2
+        -> 2
+    -> 2
 */
