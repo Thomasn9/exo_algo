@@ -23,7 +23,7 @@ console.log(tab1);
 
 // 5) Créer un tableau tab2 qui contient les nombres 238, 222, 228, 216, 200.
 console.log("=====================\\Création du tab2//=====================");
-let tab2 = [238,222,228,216,200];
+let tab2 = [238,222,228,216,200];  
 console.log(tab2);
 
 
@@ -41,6 +41,7 @@ for (let i = 0; i<tab2.length; i++){
 console.log(tab1);
 
 // 8) Afficher *un par un* tous les éléments du tableau tab1.
+
 
 // 9) Retirer et stocker dans la variable maVariable le dernier élément du tableau tab1.
 
